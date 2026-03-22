@@ -1,16 +1,20 @@
 ---
+import { Image } from "astro:assets";
+import photoWide from "../images/photo_wide.jpg";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width">
-    <meta name="generator" content={Astro.generator}>
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<Layout>
+  <div class="flex flex-col">
+    <figure class="relative">
+      <Image
+        class="object-cover object-center w-full lg:h-256 h-128"
+        src={photoWide}
+        alt="The band 'Grand Prismatic Spring' standing in an open space, while being illuminated by colorful lights."
+      />
+      <figcaption class="absolute right-2 bottom-2 text-sm">
+        &copy; Janis Birszwilks
+      </figcaption>
+    </figure>
+  </div>
+</Layout>
