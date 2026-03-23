@@ -2,19 +2,28 @@
 import { Image } from "astro:assets";
 import photoWide from "../images/photo_wide.jpg";
 import Layout from "../layouts/Layout.astro";
+import Logo from "../images/logo.svg";
 ---
 
 <Layout>
   <div class="flex flex-col">
-    <figure class="relative">
-      <Image
-        class="object-cover object-center w-full lg:h-256 h-128"
-        src={photoWide}
-        alt="The band 'Grand Prismatic Spring' standing in an open space, while being illuminated by colorful lights."
-      />
-      <figcaption class="absolute right-2 bottom-2 text-sm">
-        &copy; Janis Birszwilks
-      </figcaption>
-    </figure>
+    <div class="relative">
+      <figure class="relative">
+        <Image
+          class="object-cover object-center w-full lg:h-256 h-128"
+          src={photoWide}
+          alt="The band 'Grand Prismatic Spring' standing in an open space, while being illuminated by colorful lights."
+        />
+        <figcaption class="absolute right-2 bottom-2 text-xs">
+          &copy; Janis Birszwilks
+        </figcaption>
+      </figure>
+
+      <div
+        class="absolute inset-x-0 bottom-0 pb-20 lg:pb-40 flex flex-col items-center"
+      >
+        <Logo class="w-64 lg:w-128" />
+      </div>
+    </div>
   </div>
 </Layout>
