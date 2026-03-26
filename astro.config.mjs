@@ -6,10 +6,8 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-
   adapter: cloudflare({
-    imageService: "cloudflare-binding",
+    imageService: "compile",
   }),
 
   vite: {
